@@ -1,9 +1,6 @@
 require('dotenv').config({ path: `${process.cwd()}/.env` });
 const express = require('express');
 
-//const authRouter = require('./route/authRoute');
-//const projectRouter = require('./route/projectRoute');
-//const userRouter = require('./route/userRoute');
 const artistRouter = require('./route/artistRoute');
 const playlistTrackRouter = require('./route/playlistTrackRoute');
 const catchAsync = require('./utils/catchAsync');
@@ -14,10 +11,7 @@ const app = express();
 
 app.use(express.json());
 
-// all routes will be here
-//app.use('/api/v1/auth', authRouter);
-//app.use('/api/v1/projects', projectRouter);
-//app.use('/api/v1/users', userRouter);
+// routes
 app.use('/api/v1/artists', artistRouter);
 app.use('/api/v1/playlistTracks', playlistTrackRouter);
 

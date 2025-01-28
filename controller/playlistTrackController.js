@@ -50,9 +50,6 @@ const updatePlaylistTrack = catchAsync(async (req, res, next) => {
     result.playlist_id = body.playlistId;
     result.track_id = body.trackId;
 
-    console.log("body " + body.track_id)
-    console.log(result)
-
     const updatedResult = await result.save();
 
     return res.json({
